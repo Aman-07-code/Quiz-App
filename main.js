@@ -60,7 +60,7 @@ function showQuestion(){
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
-        button.classList.add("btn")
+        button.classList.add("btn") // adds a CSS class "btn" for styling
         answerButtons.appendChild(button);
         if(answer.correct){
             button.dataset.correct = answer.correct;
@@ -72,7 +72,7 @@ function showQuestion(){
 function resetState(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
-        answerButtons.removeChild(answerButtons.firstChild)
+        answerButtons.removeChild(answerButtons.firstChild) //removes the first child element in answerButtons. This process is repeated until all child elements are removed, effectively clearing out any answer buttons from a previous question
     }
 }
 
